@@ -23,9 +23,10 @@ class handDetector():
                                                self.mpHands.HAND_CONNECTIONS)
         return img
     
-    def findPosition(self, img, handNo=0, draw=True):
+    def findPosition(self, img, handNo=0, draw=True): 
         lmList = []
         if self.results.multi_hand_landmarks:
+            "Hello world"
             myHand = self.results.multi_hand_landmarks[handNo]
             for id, lm in enumerate(myHand.landmark):
                 # print(id, lm)
